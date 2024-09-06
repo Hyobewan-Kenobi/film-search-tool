@@ -2,9 +2,22 @@
 import { useState } from 'react';
 import Image from 'next/image'
 
+interface MovieData {
+  Title: string;
+  Released: string;
+  Type: string;
+  Country: string;
+  Genre: string;
+  Director: string;
+  Writer: string;
+  Actors: string;
+  Plot: string;
+  Poster: string;
+}
+
 export default function Home() {
   const [id, setId] = useState('');
-  const [movieData, setMovieData] = useState(null);
+  const [movieData, setMovieData] = useState<MovieData | null>(null);
   const [error, setError] = useState(null)
   const [isImageError, setIsImageError] = useState<boolean>(false);
 
