@@ -23,7 +23,7 @@ export default function Home() {
 
   const fetchMovie = async ()=>{
     const apiKey = process.env.NEXT_PUBLIC_OMDB_API_KEY
-    const url = `http://www.omdbapi.com/?t=${id}&plot=full&apikey=${apiKey}`
+    const url = `https://www.omdbapi.com/?t=${id}&plot=full&apikey=${apiKey}`
 
     try {
       const response = await fetch(url);
